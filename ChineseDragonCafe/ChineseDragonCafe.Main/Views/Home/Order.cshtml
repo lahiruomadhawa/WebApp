@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Pages/Order.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<div class="container">
+    <div class="row" style="height:500px; margin-top:20px; overflow:auto; border:solid; border-color:lightgray">
+        <div class="col-lg-12">
+            <table class="table table-borderless" id="OrderItemsTable">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                        <th scope="col" style="display:none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="emptyRow">
+                        <th class="itemNumber" scope="col"></th>
+                        <th class="itemCode"></th>
+                        <th class="itemDescription"></th>
+                        <th class="itemQty"></th>
+                        <th class="itemPrice"></th>
+                        <th class="itemRemove"></th>
+                        <th class="itemID" style="display:none"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row" style="border:solid; border-color:lightgray; margin-top:10px; padding:10px">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8" id="AddItemDiv" style="display:none">
+            <div style="margin-left:140px">
+                <div class="form-group row">
+                    <label for="itemCode" class="col-sm-2 col-form-label">Item Code</label>
+                    <div class="col-sm-10" style="max-width:100%">
+                        <input type="text" class="form-control" id="itemCode">
+                        <input type="text" class="form-control" id="itemDescription" style="display:none">
+                        <input type="text" class="form-control" id="itemID" style="display:none">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="unitPrice" class="col-sm-2 col-form-label">Unit Price</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="unitPrice" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="itemQty" class="col-sm-2 col-form-label">Qty</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="itemQty">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <button class="col-sm-2 btn btn-primary" id="AddItemToListBtn" style="margin-left:60px; width:300px">Add Item</button>
+                </div>
+                <div class="form-group row">
+                    <button class="col-sm-2 btn btn-primary" id="CloseOrderBtn" style="margin-left:60px; width:300px">Close Order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8" id="CloseOrderDev" style="display:none">
+            <div style="margin-left:140px">
+                <div class="form-group row">
+                    <label for="SelectOrderThrough" class="col-sm-2 col-form-label">Order Through</label>
+                    <div class="col-sm-10" style="max-width:100%">
+                        <select class="form-select" id="SelectOrderThrough" aria-label="Default select example" style="width:270px">
+                            <option value="1">Online</option>
+                            <option value="2">POS</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="SelectOrderType" class="col-sm-2 col-form-label" i>Order Type</label>
+                    <div class="col-sm-10">
+                        <select class="form-select" id="SelectOrderType" aria-label="Default select example" style="width:270px; margin-left:">
+                            <option value="1">Dine-In</option>
+                            <option value="2">Take Away</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <button class="col-sm-2 btn btn-primary" id="CompleteOrderBtn" style="margin-left:60px; width:300px">Complete Order</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</div>
+
+
+

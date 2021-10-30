@@ -1,0 +1,23 @@
+﻿@using ChineseDragonCafe.Main.Providers
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row" style="margin-top:10px">
+        @foreach (var item in ViewBag.Items)
+        {
+            <div class="col-lg-4 text-center" style="outline:solid; background-color:lightskyblue; padding:10px; height:150px">
+                <div class="row">
+                    @*<img src="~/Content/Images/@item.Image" />*@
+                </div>
+                <div id="@item.ID" class="row">
+                    <h1>@item.Description</h1>
+                    <h4>Portion</h4>
+                    <h3>@item.Price</h3>
+                </div>
+            </div>
+        }
+    </div>
+</div>

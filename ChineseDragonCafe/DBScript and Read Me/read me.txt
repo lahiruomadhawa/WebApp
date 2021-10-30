@@ -1,0 +1,17 @@
+
+Chinese Dragon Cafe Online Ordering System (WEB APPLICATION).
+
+
+Before start user must do following things :-
+
+	1. Inside the solution there is a folder called 'DBScript and Read Me' user need to run SQL DB scripts to generate neccesary table and data for the application.
+	
+	2. Then user need to redirect to this path "ChineseDragonCafe\ChineseDragonCafe.Main\Web.config" and open the web.config file.
+	
+	3. Inside the config file user can see two entries called name="DefaultConnection" and name="ChineseDragonCafeEntities" under connectionStrings node.
+	
+	4. Then user have to replace the db name to the "initial catalog=::::" property.
+	
+	
+
+Enjoy the meals.
